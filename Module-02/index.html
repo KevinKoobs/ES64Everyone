@@ -19,5 +19,9 @@
 			winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'],
 			results = winners.map((winner, i) => ({ name: winner, place: i + 1, race})); // The () says to the function that you want to return an Object
 	console.table(results);
+
+	const   ages = [13,4,53,88,6,86,34,76,21,29,58,64],
+			olderThanSixty = ages.filter(age => age > 59);
+	console.table(olderThanSixty);
 </script>
 </html>
