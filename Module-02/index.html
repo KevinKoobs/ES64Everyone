@@ -7,21 +7,76 @@
 	<title>Module 02</title>
 </head>
 <body>
-
+<div class="wrapper">
+	<div class="image-box">
+		<h2>Kevin Koobs</h2>
+		<p>@devvinWithKevin</p>
+	</div>
+</div>
 </body>
+
+<style>
+	.wrapper {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: sans-serif;
+		font-weight: 100;
+		color: #fff;
+	}
+
+	.image-box {
+		background:
+			url(https://images.unsplash.com/photo-1498371453881-a41c11888fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80)
+			center fixed no-repeat;
+		width: 50px;
+		height: 50px;
+		position: relative;
+		padding: 50px;
+		transition: width 0.2s, height 0.6s;
+	}
+
+	.image-box.opening {
+		width: 75vw;
+		height: 75vw;
+	}
+
+	.image-box h2, .image-box p {
+		position: absolute;
+		width: 100%;
+		transition: all 0.5s;
+	}
+	.image-box h2 {
+		font-size: 64px;
+		transform: translateX(-200%);
+		top: 0;
+	}
+	.image-box p {
+		bottom: 0;
+		transform: translateX(200%);
+	}
+
+	.image-box.open > * {
+		transform: translate(0%);
+	}
+</style>
+
 <script>
 	const names = ['Kevin', 'Jordy', 'Kiki'];
 	// This uses the implicit return function. You also can use names.map(name => { return `${name} - Team Mand`});
 	const fullNames = names.map(name => `${name} - Team Mand`);
 	console.log(fullNames);
 
-	const   race = '100m Dash',
-			winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'],
-			results = winners.map((winner, i) => ({ name: winner, place: i + 1, race})); // The () says to the function that you want to return an Object
+	const race = '100m Dash',
+		winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'],
+		results = winners.map((winner, i) => ({name: winner, place: i + 1, race})); // The () says to the function that you want to return an Object
 	console.table(results);
 
-	const   ages = [13,4,53,88,6,86,34,76,21,29,58,64],
-			olderThanSixty = ages.filter(age => age > 59);
+	const ages = [13, 4, 53, 88, 6, 86, 34, 76, 21, 29, 58, 64],
+		olderThanSixty = ages.filter(age => age > 59);
 	console.table(olderThanSixty);
+	console.clear();
+
 </script>
 </html>
