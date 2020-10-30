@@ -78,5 +78,16 @@
 	console.table(olderThanSixty);
 	console.clear();
 
+	const box = document.querySelector('.image-box');
+
+	box.addEventListener('click', function() {
+		// when using '() => {}', 'this' is window. Now, it's our div.image-box.
+		this.classList.toggle('opening');
+		setTimeout(() => {
+			// If you use 'function() {}' here, 'this' will be bound to the timeout. Now, 'this' is still div.image-box because the arrow function doesn't
+			// reassign the this value
+			this.classList.toggle('open');
+		}, 500);
+	})
 </script>
 </html>
