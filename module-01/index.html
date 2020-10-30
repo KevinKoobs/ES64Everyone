@@ -32,6 +32,19 @@ console.log(person.age) // 29
 console.log(person.gender) // man
 // person = {name: 'Kev'} // Error
 
+// You can freeze an object an make it 'immutable'
+const frozenPerson = Object.freeze(person);
+console.log(frozenPerson.age); // 28
+frozenPerson.age = 29;
+console.log(frozenPerson.age); // Still 28
+
+// If you make an IIFE (Immediately invoked function expression), all variables will be scoped within that function and you cannot accidentally overwrite
+// other variables.
+// If you access 'name' in the console, you'll get an empty string because your browser also has a constant named 'name'
+(() => {
+	const name = 'Kevin';
+	console.log(name);
+})();
 
 </script>
 </html>
