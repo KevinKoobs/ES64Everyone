@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Module 01</title>
+</head>
+<body>
+</body>
+
+<script>
+var width = 100;
+let dogName = 'Harry';
+
+if(width > 29) {
+	// Lets are block-scoped, whereas vars are functionscoped. So dogName will be Ron in here, but Harry underneath this if statement
+	let dogName = 'Ron';
+	console.log(dogName);
+}
+console.log(dogName);
+
+// Constants can't be overwritten, but aren't immutable
+const person = {
+	name: 'Kevin',
+	age: 28
+}
+console.log(person.age) // 28
+person.age = 29;
+console.log(person.age) // 29
+// person.gender = 'man';
+console.log(person.gender) // man
+// person = {name: 'Kev'} // Errorgs
+
+
+</script>
+</html>
