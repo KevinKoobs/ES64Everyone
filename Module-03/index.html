@@ -23,5 +23,21 @@
 	`;
 
 	document.body.innerHTML = markup;
+
+	const cats = [
+		{name: 'Ollie', age: 2},
+		{name: 'Ellie', age: 2},
+		{name: 'Krul', age: 8},
+		{name: 'Zimba', age: 2},
+		{name: 'Pebbles', age: 4}
+	]
+
+	const list = `
+		<ul>
+			${cats.map(cat => `<li>${cat.name} is ${age} years old</li>`)}
+		</ul>
+	`;
+
+	document.body.innerHTML = list;
 </script>
 </html>
