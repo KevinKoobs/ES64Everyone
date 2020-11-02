@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<ul>
+	<li data-time="5:17">Flexbox Video</li>
+	<li data-time="8:22">Flexbox Video</li>
+	<li data-time="3:34">Redux Video</li>
+	<li data-time="5:23">Flexbox Video</li>
+	<li data-time="7:12">Flexbox Video</li>
+	<li data-time="7:24">Redux Video</li>
+	<li data-time="6:46">Flexbox Video</li>
+	<li data-time="4:45">Flexbox Video</li>
+	<li data-time="4:40">Flexbox Video</li>
+	<li data-time="7:58">Redux Video</li>
+	<li data-time="11:51">Flexbox Video</li>
+	<li data-time="9:13">Flexbox Video</li>
+	<li data-time="5:50">Flexbox Video</li>
+	<li data-time="5:52">Redux Video</li>
+	<li data-time="5:49">Flexbox Video</li>
+	<li data-time="8:57">Flexbox Video</li>
+	<li data-time="11:29">Flexbox Video</li>
+	<li data-time="3:07">Flexbox Video</li>
+	<li data-time="5:59">Redux Video</li>
+	<li data-time="3:31">Flexbox Video</li>
+</ul>
+</body>
+<script>
+
+	// Select all the list items on the page and convert to array
+	const items = [...document.querySelectorAll('li')];
+
+	// Filter for only the elements that contain the word 'Flexbox'
+	const outcome = items.filter(item => item.textContent.includes('Flexbox'))
+
+	// map down to a list of time strings
+	.map(item => item.dataset.time)
+
+	// map to an array of seconds
+	.map(item => {
+		let time = item.split(':'),
+			minutes = time[0],
+			seconds = time[1];
+		return (minutes * 60) + seconds;
+	})
+
+	// reduce to get total
+	.reduce((seconds, _outcome) => parseInt(seconds) + parseInt(_outcome));
+	console.log(outcome);
+	// 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
+
+</script>
+</html>
