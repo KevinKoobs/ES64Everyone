@@ -39,5 +39,24 @@
 	`;
 
 	document.body.innerHTML = list;
+
+	const beer = {
+		name: 'Leffe Blond',
+		brewery: 'Leffe België',
+		keywords: ['blonde', 'white', 'spiced']
+	}
+	function renderKeywords(keywords) {
+		return `<ul>${keywords.map(word => `<li>${word}</li>`).join('')}</ul>`;
+	}
+
+	const beerMarkup = `
+		<div class="beer">
+			<h2>${beer.name}</h2>
+			<p>${beer.brewery}</p>
+			${renderKeywords(beer.keywords)}
+		</div>
+	`
+
+	document.body.innerHTML = beerMarkup;
 </script>
 </html>
