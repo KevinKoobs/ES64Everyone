@@ -14,9 +14,28 @@
 		name: 'Ollie',
 		city: 'Zwolle',
 		age: 2,
-		fullName: 'Oliver Twist'
+		fullName: 'Oliver Twist',
+		family: {
+			sister: {
+				name: 'Ellie',
+				age: 2,
+				fullName: 'Elizabeth Bennet'
+			},
+			pawpy: {
+				name: 'Dad',
+				age: 28,
+				fullName: 'Incognito'
+			},
+			meowmy: {
+				name: 'Mom',
+				age: 26,
+				fullName: 'Not allowed'
+			}
+		}
 	}
 
 	const { name, fullName } = cat;
+	const { meowmy, pawpy } = cat.family;
+	console.log(meowmy, pawpy, name, fullName);
 </script>
 </html>
