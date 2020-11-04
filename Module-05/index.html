@@ -53,8 +53,19 @@
 
 	let onPitch = 'Wesley';
 	let onSide = 'Rafael';
-	console.log(onPitch, onSide);
+//	console.log(onPitch, onSide);
 	[onPitch, onSide] = [onSide, onPitch];
-	console.log(onPitch, onSide);
+//	console.log(onPitch, onSide);
+
+	function convertCurrency(amount) {
+		const converted = {
+			USD: amount * 0.76,
+			CAN: amount * 1.10,
+			AUD: amount * 1.01
+		}
+		return converted;
+	}
+
+	const {USD, CAN, AUD} = convertCurrency(112);
 </script>
 </html>
