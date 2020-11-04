@@ -50,5 +50,11 @@
 
 	const team = ['Dusan', 'Andre', 'Daley', 'David', 'Davy', 'Ryan', 'Nicolas'];
 	const [captain, assistant, ...players] = team;
+
+	let onPitch = 'Wesley';
+	let onSide = 'Rafael';
+	console.log(onPitch, onSide);
+	[onPitch, onSide] = [onSide, onPitch];
+	console.log(onPitch, onSide);
 </script>
 </html>
