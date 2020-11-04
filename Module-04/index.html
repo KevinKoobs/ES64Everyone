@@ -18,6 +18,13 @@
 	const flight = '20-AC2020-jz';
 	flight.startsWith('AC') // false
 	flight.startsWith('AC', 3) // true (skip the first three characters)
+
+	flight.endsWith('jz') // true
+
+	const accountNumber = '825242631RT0001';
+	accountNumber.endsWith('RT'); // false
+	accountNumber.endsWith('RT', 11); // true (only take the first 11 characters
+
 </script>
 
 </html>
