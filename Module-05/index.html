@@ -36,8 +36,10 @@
 
 	const { name, fullName } = cat;
 	const { meowmy, pawpy } = cat.family;
-	console.log(meowmy, pawpy, name, fullName);
 
 	const { meowmy: mom, pawpy: dad} = cat.family;
+
+	const settings = {width: 300, color: 'black'};
+	const {width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
 </script>
 </html>
