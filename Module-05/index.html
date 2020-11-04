@@ -67,5 +67,11 @@
 	}
 
 	const {USD, CAN, AUD} = convertCurrency(112);
+
+	function tipCalc({ total, tip = 0.15, tax = 0.13 }) {
+		return total + (tip * total) + (tax * total);
+	}
+
+	console.log(tipCalc({ total: 125, tax: 0.04}));
 </script>
 </html>
