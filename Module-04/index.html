@@ -27,6 +27,15 @@
 
 	flight.includes('AC') // true
 	flight.includes('ac') // false
+
+	function leftPad(string, length = 20) {
+		return `-> ${' '.repeat(length - string.length)}${string}`;
+	}
+
+	console.log(leftPad('Skoda'));
+	console.log(leftPad('Octavia'));
+	console.log(leftPad('Combi'));
+
 </script>
 
 </html>
