@@ -34,10 +34,10 @@
 		}
 	}
 
-	const { name, fullName } = cat;
-	const { meowmy, pawpy } = cat.family;
-
-	const { meowmy: mom, pawpy: dad} = cat.family;
+//	const { name, fullName } = cat;
+//	const { meowmy, pawpy } = cat.family;
+//
+//	const { meowmy: mom, pawpy: dad} = cat.family;
 
 	const settings = {width: 300, color: 'black'};
 	const {width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
@@ -47,5 +47,8 @@
 
 	const data = 'TV,Electronics,LG,23';
 	const [type, category, brand, inventory] = data.split(',');
+
+	const team = ['Dusan', 'Andre', 'Daley', 'David', 'Davy', 'Ryan', 'Nicolas'];
+	const [captain, assistant, ...players] = team;
 </script>
 </html>
