@@ -13,7 +13,10 @@
 		if(cut === 'Brisket') {
 			continue;
 		}
-		console.log(cut);
+	}
+
+	for (const [i, cut] of cuts.entries()) {
+		console.log(`${cut} is the ${i + 1} index`);
 	}
 </script>
 <body>
