@@ -52,8 +52,22 @@
 		});
 	}
 
+	function hydrateAuthor(post) {
+		return new Promise((resolve, reject) => {
+			const authorDetails = authors.find(author => author.name === post.author);
+			if(authorDetails) {
+				post.author = authorDetails;
+				resolve(post);
+			} else {
+				reject(Error('No author found'));
+			}
+		});
+	}
+
 	getPostById(2).then(post=> {
-		console.log(post)
+		return hydrateAuthor(post);
+	}).then(post => {
+		console.log(post);
 	});
 </script>
 </html>
