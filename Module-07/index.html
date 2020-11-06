@@ -7,6 +7,14 @@
 	<title>Document</title>
 </head>
 <body>
-
+	<div class="people">
+		<p>Kevin</p>
+		<p>Richard</p>
+		<p>Sven</p>
+	</div>
 </body>
+<script>
+	const people = Array.from(document.querySelectorAll('.people p'), person => person.textContent);
+	console.log(people);
+</script>
 </html>
