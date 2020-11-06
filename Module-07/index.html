@@ -16,5 +16,11 @@
 <script>
 	const people = Array.from(document.querySelectorAll('.people p'), person => person.textContent);
 	console.log(people);
+
+	function sumAll() {
+		const nums = Array.from(arguments);
+		return nums.reduce((prev, next) => prev + next, 0);
+	}
+	console.log(sumAll(123,87,654,546,1,684,4165,654));
 </script>
 </html>
