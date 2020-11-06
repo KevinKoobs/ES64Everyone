@@ -9,4 +9,13 @@
 <body>
 
 </body>
+<script>
+	const postsPromise = fetch('https://api.github.com/users/octocat/orgs');
+	postsPromise
+		.then(data => data.json())
+		.then(data => console.log(data))
+		.catch(error => {
+			console.log(error);
+		});
+</script>
 </html>
