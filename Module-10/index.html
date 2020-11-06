@@ -10,8 +10,8 @@
 
 </body>
 <script>
-	const postsPromise = fetch('https://api.github.com/users/octocat/orgs');
-	postsPromise
+	const _postsPromise = fetch('https://api.github.com/users/octocat/orgs');
+	_postsPromise
 		.then(data => data.json())
 //		.then(data => console.log(data))
 		.catch(error => {
@@ -64,10 +64,24 @@
 		});
 	}
 
-	getPostById(2).then(post=> {
-		return hydrateAuthor(post);
-	}).then(post => {
-		console.log(post);
-	});
+//	getPostById(2).then(post=> {
+//		return hydrateAuthor(post);
+//	}).then(post => {
+//		console.log(post);
+//	}).catch(err => {
+//		console.error(err);
+//	});
+
+	const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+	const streetCarsLyonPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=lyon');
+
+	Promise
+		.all([streetCarsPromise, streetCarsLyonPromise])
+		.then(responses => {
+			return Promise.all(responses.map(response => response.json()));
+		}).then(responses => {
+			console.log(responses);
+		});
+
 </script>
 </html>
