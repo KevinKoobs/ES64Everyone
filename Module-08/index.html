@@ -57,7 +57,7 @@
 	const commentIndex = comments.findIndex(comment => comment.id === id);
 	// Spread all comments except the one with the above index in newComments.
 	const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
-	console.log(newComments);
+//	console.log(newComments);
 
 	const
 		titleElement = document.querySelector('.jump'),
@@ -73,7 +73,7 @@
 	inventors.push(...newInventors);
 
 	function sayHi(first, last) {
-		console.log(`Hey there ${first} ${last}`);
+//		console.log(`Hey there ${first} ${last}`);
 	}
 	const name = ['Kevin', 'Koobs'];
 	sayHi(...name);
@@ -83,6 +83,10 @@
 		return amounts.map(amount => amount * rate);
 	}
 
-	console.log(convertCurrency(1.54, 10, 20, 34, 66, 12, 1));
+//	console.log(convertCurrency(1.54, 10, 20, 34, 66, 12, 1));
+
+	const runner = ['Kevin Koobs', 124, 5, 23, 5.5, 7, 12, 18];
+	const [runnerName, runnerId, ...runs] = runner;
+	console.log(runnerName, runnerId, runs);
 </script>
 </html>
