@@ -17,20 +17,23 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	h2 {
 		font-size: 96px;
 	}
+
 	h2 span {
 		display: inline-block;
 		transition: transform 200ms;
 	}
+
 	h2 span:hover {
 		transform: scale(1.5) translateY(-20px) rotate(10deg);
-		text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+		text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 	}
 </style>
 <body>
-	<h2 class="jump">SPREADS!</h2>
+<h2 class="jump">SPREADS!</h2>
 </body>
 <script>
 	const featured = ['Deep Dish', 'Peperoni', 'Hawaiian'],
@@ -43,17 +46,23 @@
 	// This makes a genuine copy of pizzas. Changing values here has no effect on the original array
 	const copyPizzas = [...pizzas];
 
-	const deepDish = {
-		pizzaName: 'Deep Dish',
-		size: 'Medium',
-		ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
-	}
+	const comments = [
+		{id: 209384, text: 'I love your dog!'},
+		{id: 523423, text: 'Cuuute! 🐐'},
+		{id: 632429, text: 'You are so dumb'},
+		{id: 192834, text: 'Nice work on this wes!'},
+	];
 
+	const id = 632429;
+	const commentIndex = comments.findIndex(comment => comment.id === id);
+	// Spread all comments except the one with the above index in newComments.
+	const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
+	console.log(newComments);
 
 	const
-		titleElement    = document.querySelector('.jump'),
-		title           = titleElement.textContent,
-		spannedTitle    = [...title].map(letter => `<span>${letter}</span>`).join('');
+		titleElement = document.querySelector('.jump'),
+		title = titleElement.textContent,
+		spannedTitle = [...title].map(letter => `<span>${letter}</span>`).join('');
 
 	titleElement.innerHTML = spannedTitle;
 
