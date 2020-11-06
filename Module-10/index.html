@@ -15,7 +15,15 @@
 		.then(data => data.json())
 		.then(data => console.log(data))
 		.catch(error => {
-			console.log(error);
 		});
+
+	const p = new Promise((resolve, reject) => {
+//		resolve('Kevin is cool');
+		reject(Error('Error!'));
+	});
+
+	p
+		.then((data) => console.log(data))
+		.catch(error => console.error(error));
 </script>
 </html>
