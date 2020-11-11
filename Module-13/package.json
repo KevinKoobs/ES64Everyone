@@ -12,7 +12,14 @@
     "flickity": "^2.2.1",
     "insane": "^2.6.2",
     "jquery": "^3.5.1",
+    "jsonp": "^0.2.1",
     "lodash": "^4.17.20",
     "slug": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "webpack": "^5.4.0"
   }
 }
