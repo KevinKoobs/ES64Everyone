@@ -20,11 +20,18 @@
 		cuddle() {
 			console.log(`Purr! Purr! I love you my butler.`)
 		}
+		set nickname(value) {
+			this.nick = value.trim();
+		}
+		get nickname() {
+			return this.nick.toUpperCase();
+		}
 	}
 	const Ollie = new Cat('Ollie', 'British Shorthair');
 	const Ellie = new Cat('Ellie', 'British Shorthair');
 
-	Ollie.cuddle();
+
+
 </script>
 </body>
 </html>
