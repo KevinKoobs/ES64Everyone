@@ -26,10 +26,10 @@
 		}
 	}
 
-	class Cat {
+	class Cat extends Animal {
 		constructor(name, breed)
 		{
-			this.name = name;
+			super(name);
 			this.breed = breed;
 		}
 		meow() {
