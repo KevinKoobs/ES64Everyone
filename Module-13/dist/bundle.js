@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("abc123")})();
+(()=>{"use strict";console.log("abc123","https://google.com"),console.log("Hello there ".concat("Kevin"))})();
