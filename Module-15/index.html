@@ -7,6 +7,24 @@
 	<title>Document</title>
 </head>
 <body>
+<script>
+	class Cat {
+		constructor(name, breed)
+		{
+			this.name = name;
+			this.breed = breed;
+		}
+		meow() {
+			console.log(`Meow! Meow! My name is ${this.name}`)
+		}
+		cuddle() {
+			console.log(`Purr! Purr! I love you my butler.`)
+		}
+	}
+	const Ollie = new Cat('Ollie', 'British Shorthair');
+	const Ellie = new Cat('Ellie', 'British Shorthair');
 
+	Ollie.cuddle();
+</script>
 </body>
 </html>
