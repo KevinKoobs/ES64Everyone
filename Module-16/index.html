@@ -7,6 +7,16 @@
 	<title>Document</title>
 </head>
 <body>
+	<script>
+		function* listPeople() {
+			yield('Kevin');
+			yield('Sanny');
+			yield('Ollie');
+			yield('Ellie');
+		}
 
+		const family = listPeople();
+
+	</script>
 </body>
 </html>
